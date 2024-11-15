@@ -9,8 +9,11 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname)));
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/css', express.static(path.join(__dirname, 'public/css')));
+app.use('/js', express.static(path.join(__dirname, 'public/js')));
+app.use('/img', express.static(path.join(__dirname, 'public/img')));
+app.use('/html', express.static(path.join(__dirname, 'public/html')));
 
 // Middleware con log
 app.use((req, res, next) => {
@@ -46,6 +49,19 @@ transporter.verify((error, success) => {
 // Ruta principal
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/html/index.html'));
+});
+
+// Rutas específicas para cada página
+app.get('/catalogo', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/html/Catalago.html'));
+});
+
+app.get('/carrito', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/html/Carrito.html'));
+});
+
+app.get('/compra', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/html/Compra.html'));
 });
 
 // Ruta para enviar correos con mejor manejo de errores
@@ -171,6 +187,18 @@ app.post('/api/send-invoice', async (req, res) => {
             message: 'Error al enviar la factura: ' + error.message
         });
     }
+});
+
+// Agregar después de todas las rutas
+app.use((req, res, next) => {
+    console.log('404 - Recurso no encontrado:', req.url);
+    res.status(404).send('Recurso no encontrado');
+});
+
+// Middleware de manejo de errores
+app.use((err, req, res, next) => {
+    console.error('Error:', err);
+    res.status(500).send('Error interno del servidor');
 });
 
 const PORT = process.env.PORT || 3000;
