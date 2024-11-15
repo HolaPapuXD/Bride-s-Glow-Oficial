@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cátalogo</title>
+    <link rel="stylesheet" href="../css/StyleCP.CSS">
+</head>
+
+
+<body>
+    <header> 
+        <nav>
+            <ol class="nav-links">
+                <li><a href="../html/index.html">Inicio</a></li>
+                <li><a href="../html/Nosotros.html">Nosotros</a></li>
+                <li><a href="../html/Catalago.html">Catálogo</a></li>
+                <li><a href="../html/Productos.html">Productos</a></li>
+                <li><a href="../html/Contacto.html">Contacto</a></li>
+            </ol>
+        </nav>
+
+        <div class="cart-icon" onclick="window.location.href='Carrito.html'">
+            🛒 <span class="cart-count">0</span>
+        </div>
+    
+        <div class="cart-notification" id="cartNotification">
+            Producto añadido al carrito
+        </div>
+
+    </header>
+    <div class="logo-container">
+        <img src="../img/logo.jpg" alt="Logo de Bride's Glow">
+    </div>
+    
+
+    <section class="catalog">
+        <h1>Catálogo de vestidos</h1>
+        <div class="image-grid">
+            <!-- Bloques de imagen -->
+            <div class="image-item">
+                <img src="../img/ves1.jpg" alt="Producto 1">
+                <h3>Noelle</h3>
+                <div class="image-description">$ 2.980.000</div>
+                <button class="btn-add-cart" 
+                onclick="addToCart('Noelle', 2980000, '../img/ves1.jpg')">
+            Añadir al carrito
+        </button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves2.jfif" alt="Producto 2">
+                <h3>Marie</h3>
+                <div class="image-description">$ 2.856.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Marie', 2856000, '../img/ves2.jfif')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves3.jpg" alt="Producto 3">
+                <h3>Kala</h3>
+                <div class="image-description">$ 2.856.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Kala', 2856000, '../img/ves3.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves4.jpg" alt="Producto 4">
+                <h3>Anne</h3>
+                <div class="image-description">$ 2.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Anne', 2980000, '../img/ves4.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves4 (2).jpg" alt="Producto 5">
+                <h3>Charlotte</h3>
+                <div class="image-description">$ 2.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Charlotte', 2980000, '../img/ves4 (2).jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves5.jpg" alt="Producto 6">
+                <h3>Paulina</h3>
+                <div class="image-description">$ 3.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Paulina', 3980000, '../img/ves5.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves6.jpg" alt="Producto 7">
+                <h3>Valery</h3>
+                <div class="image-description">$ 2.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Valery', 2980000, '../img/ves6.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves7.jpg" alt="Producto 8">
+                <h3>Amy</h3>
+                <div class="image-description">$ 5.000.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Amy', 5000000, '../img/ves7.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves8.jpg" alt="Producto 9">
+                <h3>Antonella</h3>
+                <div class="image-description">$ 2.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Antonella', 2980000, '../img/ves8.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves9.jpg" alt="Producto 10">
+                <h3>Yvonne</h3>
+                <div class="image-description">$ 1.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Yvonne', 1980000, '../img/ves9.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves10.jpeg" alt="Producto 11">
+                <h3>Salome</h3>
+                <div class="image-description">$ 2.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Salome', 2980000, '../img/ves10.jpeg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves11.jpg" alt="Producto 12">
+                <h3>Isabella</h3>
+                <div class="image-description">$ 5.000.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Isabella', 5000000, '../img/ves11.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves12.jpg" alt="Producto 13">
+                <h3>Zoe</h3>
+                <div class="image-description">$ 3.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Zoe', 3980000, '../img/ves12.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves13.jpeg" alt="Producto 14">
+                <h3>Sarah</h3>
+                <div class="image-description">$ 1.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Sarah', 1980000, '../img/ves13.jpeg')">Añadir a carrito</button>
+
+
+            </div>
+            <div class="image-item">
+                <img src="../img/ves14.jpg" alt="Producto 15">
+                <h3>Rose</h3>
+                <div class="image-description"> $ 4.500.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Rose', 4500000)">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves15.jpg" alt="Producto 16">
+                <h3>Daniela</h3>
+                <div class="image-description">  $ 1.980.000 </div>
+                <button class="btn-add-cart" onclick="addToCart('Daniela', 1980000, '../img/ves15.jpg')">Añadir a carrito</button>
+
+            </div>
+            <div class="image-item">
+                <img src="../img/ves16.jpg" alt="Producto 17">
+                <h3>Everly</h3>
+                <div class="image-description">$ 1.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Everly', 1980000, '../img/ves16.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/ves17.jpg" alt="Producto 18">
+                <h3>Joanne</h3>
+                <div class="image-description">$ 3.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Joanne', 3980000, '../img/ves17.jpg')">Añadir a carrito</button>
+
+            </div>
+            <div class="image-item">
+                <img src="../img/ves18.jpg" alt="Producto 19">
+                <h3>Violette</h3>
+                <div class="image-description">$ 1.980.000</div>
+                <button class="add-to-cart" onclick="addToCart('Violette', 1980000, '../img/ves18.jpg')">Añadir a carrito</button>
+
+            </div>
+            <div class="image-item">
+                <img src="../img/ves19.jpg" alt="Producto 20">
+                <h3>Chloe</h3>
+                <div class="image-description">$ 3.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Chloe', 3980000, '../img/ves19.jpg')">Añadir a carrito</button>
+
+            </div>
+            <div class="image-item">
+                <img src="../img/ves20.jpg" alt="Producto 21">
+                <h3>Diane</h3>
+                <div class="image-description">$ 2.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('Diane', 2980000, '../img/ves20.jpg')">Añadir a carrito</button>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nuestra Empresa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+<script src="../js/cataprodu.js"></script>
+
+</html>

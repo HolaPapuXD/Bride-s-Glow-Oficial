@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="../css/StyleContacto.CSS">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ol class="nav-links">
+                <li><a href="../html/index.html">Inicio</a></li>
+                <li><a href="../html/Nosotros.html">Nosotros</a></li>
+                <li><a href="../html/Catalago.html">Catálogo</a></li>
+                <li><a href="../html/Productos.html">Productos</a></li>
+                <li><a href="../html/Contacto.html">Contacto</a></li>
+            </ol>
+        </nav>
+    </header>
+
+    <section class="contact-form">
+        <h1>Formulario de Contacto</h1>
+        <form id="contactForm" class="form-container">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Nombre" required>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="Mensaje" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nuestra Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/js/contact.js"></script>
+</body>
+
+</html>

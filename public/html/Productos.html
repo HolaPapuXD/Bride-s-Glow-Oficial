@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="../css/StyleCP.CSS">
+</head>
+
+<body>
+    <header> 
+        <nav>
+            <ol class="nav-links">
+                <li><a href="../html/index.html">Inicio</a></li>
+                <li><a href="../html/Nosotros.html">Nosotros</a></li>
+                <li><a href="../html/Catalago.html">Catálogo</a></li>
+                <li><a href="../html/Productos.html">Productos</a></li>
+                <li><a href="../html/Contacto.html">Contacto</a></li>
+            </ol>
+        </nav>
+
+        <div class="cart-icon" onclick="window.location.href='Carrito.html'">
+            🛒 <span class="cart-count">0</span>
+        </div>
+    
+        <div class="cart-notification" id="cartNotification">
+            Producto añadido al carrito
+        </div>
+
+    </header>
+
+    <div class="logo-container">
+        <img src="../img/logo.jpg" alt="Logo de Bride's Glow">
+    </div>
+
+    <section class="catalog">
+        <h1>Catálogo de Productos</h1>
+        <div class="image-grid">
+            <!-- Bloques de imagen -->
+            <div class="image-item">
+                <img src="../img/arete1.jpg" alt="Producto 1">
+                <h3>VELLE</h3>
+                <div class="image-description">$ 450.000</div>
+                <button class="btn-add-cart" onclick="addToCart('VELLE', 450000, 'img/arete1.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/arete2.jpg" alt="Producto 2">
+                <h3>CAMILLE</h3>
+                <div class="image-description">$ 356.000</div>
+                <button class="btn-add-cart" onclick="addToCart('CAMILLE', 356000, '../img/arete2.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/arete3.jpeg" alt="Producto 3">
+                <h3>SOFIA</h3>
+                <div class="image-description">$ 256.000</div>
+                <button class="btn-add-cart" onclick="addToCart('SOFIA', 256000, '../img/arete3.jpeg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/arete4.jpeg" alt="Producto 4">
+                <h3>SANDRINGHAM</h3>
+                <div class="image-description">$ 180.000</div>
+                <button class="btn-add-cart" onclick="addToCart('SANDRINGHAM', 180000, '../img/arete4.jpeg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/arete5.jpg" alt="Producto 5">
+                <h3>DESIRE</h3>
+                <div class="image-description">$ 200.000</div>
+                <button class="btn-add-cart" onclick="addToCart('DESIRE', 200000, '../img/arete5.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/collar1.jpg" alt="Producto 6">
+                <h3>ELFIN</h3>
+                <div class="image-description">$ 480.000</div>
+                <button class="btn-add-cart" onclick="addToCart('ELFIN', 480000, '../img/collar1.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/collar2.jpg" alt="Producto 7">
+                <h3>GABRIELLA</h3>
+                <div class="image-description">$ 250.000</div>
+                <button class="btn-add-cart" onclick="addToCart('GABRIELLA', 250000, '../img/collar2.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/collar3.jpg" alt="Producto 8">
+                <h3>EMMA</h3>
+                <div class="image-description">$ 180.000</div>
+                <button class="btn-add-cart" onclick="addToCart('EMMA', 180000, '../img/collar3.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/collar4.jpg" alt="Producto 9">
+                <h3>MARIANA</h3>
+                <div class="image-description">$ 260.000</div>
+                <button class="btn-add-cart" onclick="addToCart('MARIANA', 260000, '../img/collar4.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/corona1.jfif" alt="Producto 10">
+                <h3>MELODY</h3>
+                <div class="image-description">$ 1.980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('MELODY', 1980000, '../img/corona1.jfif')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/corona2.jfif" alt="Producto 11">
+                <h3>RAPUNZEL</h3>
+                <div class="image-description">$ 980.000</div>
+                <button class="btn-add-cart" onclick="addToCart('RAPUNZEL', 980000, '../img/corona2.jfif')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/corona3.jpg" alt="Producto 12">
+                <h3>ISLINGTON</h3>
+                <div class="image-description">$ 500.000</div>
+                <button class="btn-add-cart" onclick="addToCart('ISLINGTON', 500000, '../img/corona3.jpg')">Añadir a carrito</button>
+            </div>
+            <div class="image-item">
+                <img src="../img/corona4.jpg" alt="Producto 13">
+                <h3>DINA</h3>
+                <div class="image-description">$ 950.000</div>
+                <button class="btn-add-cart" onclick="addToCart('DINA', 950000, '../img/corona4.jpg')">Añadir a carrito</button>
+            </div>     
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Nuestra Empresa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+
+<script src="../js/cataprodu.js"></script>
+</html>

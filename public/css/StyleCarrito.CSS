@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #e30044;
+    --primary-hover: #ed0000;
+    --danger-color: #ff3b30;
+    --text-primary: #1d1d1f;
+    --text-secondary: #86868b;
+    --border-color: #d2d2d7;
+    --background-light: #f5f5f7;
+    --border-radius: 12px;
+    --shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+body {
+    background-color: var(--background-light);
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.cart-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.cart-count {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.cart-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+.cart-items {
+    border-right: 1px solid var(--border-color);
+    padding-right: 2rem;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.cart-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cart-item-name {
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.cart-item-price {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.quantity-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: white;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    transition: all 0.2s;
+}
+
+.quantity-btn:hover {
+    background: var(--background-light);
+}
+
+.quantity-number {
+    font-size: 1rem;
+    min-width: 24px;
+    text-align: center;
+}
+
+.cart-item-total {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.remove-btn {
+    color: var(--danger-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.remove-btn:hover {
+    opacity: 1;
+}
+
+.cart-summary {
+    padding: 1.5rem;
+    background: var(--background-light);
+    border-radius: var(--border-radius);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.total-row.final {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+    background: var(--primary-hover);
+}
+
+.cart-empty {
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--text-secondary);
+}
+
+.continue-shopping {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.continue-shopping:hover {
+    text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .cart-content {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-items {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .cart-item {
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+    }
+
+    .cart-item-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .quantity-control {
+        margin-top: 1rem;
+    }
+
+    .cart-item-total {
+        margin-top: 0.5rem;
+    }
+}
